@@ -21,6 +21,8 @@
 ### 安装脚手架
 
 ```
+    mkdir legoTest
+    cd legoTest
     fis3 init lego_tpl
 ```
 
