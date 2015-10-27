@@ -70,7 +70,7 @@ fis.match('**/_*.scss', {
         isMod: false
     })
     .match('**.{scss,sass}', {
-        parser: fis.plugin('sass', {
+        parser: fis.plugin('node-sass', {
             include_paths: ['modules/common/sass']
         }),
         rExt: '.css'

@@ -4,6 +4,19 @@
 * [fis3-lego-hook](https://github.com/imweb/fis3-hook-lego)
 
 ## 使用
+### 需要（推荐）安装的包
+* fis3
+* fis3-hook-commonjs
+* fis3-hook-lego
+* fis3-postpackager-loader
+* fis3-postprocessor-extras_uri
+* fis3-packager-smart
+* fis-parser-imweb-tpl
+* fis-parser-imweb-tplv2（测试中）
+* fis-parser-sass （兼容以前的）
+* fis-parser-node-sass （推荐）
+* fis-postprocessor-autoprefixer
+* fis-prepackager-csswrapper
 
 ### 安装脚手架
 
