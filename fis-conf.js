@@ -1,11 +1,10 @@
 // var name = 'fis3';
 
-// fis.project.setProjectRoot('src');
-// fis.processCWD = fis.project.getProjectPath()
+fis.project.setProjectRoot('src');
+fis.processCWD = fis.project.getProjectPath();
 fis.set('project.md5Connector', '.');
 fis.hook('commonjs');
 fis.hook('lego');
-
 
 fis.match('**/_*.scss', {
         release: false
@@ -19,16 +18,18 @@ fis.match('**/_*.scss', {
     .match('MIT-LICENSE', {
         release: false
     })
+
     // .match('lego_modules/**/*.html', {
     //     release: false
     // })
     .match('lego_modules/**.min.js', {
         release: false
     })
+
     // .match('lego_modules/**src/*.js', {
     //     release: false
     // })
-    
+
     .match(/\/(.+)\.tpl$/, {    // js 模版一律用 .tpl
         isMod: true,
         rExt: 'js',
@@ -44,7 +45,7 @@ fis.match('**/_*.scss', {
         isMod: true,
         id: '$1'
     })
-    
+
     // 简化 modules 同名引用
     // modules/index/tupu/tupu.js -> require('index/tupu');
     .match(/^\/modules\/((?:[^\/]+\/)*)([^\/]+)\/\2\.(js)$/i, {
@@ -57,12 +58,13 @@ fis.match('**/_*.scss', {
     .match('partials/**.js', {
         isMod: false
     })
-    .match(/(mod|badjs|bj-report)\.js$/, { // 非模块
+    .match(/\/(mod|badjs|bj-report)\.js$/, { // 非模块
         isMod: false
     })
     .match('pages/**.js', {
         isMod: true
     })
+
     // .match('*.{html,js}', { // 同名依赖
     //     useSameNameRequire: true
     // })
@@ -71,7 +73,7 @@ fis.match('**/_*.scss', {
     })
     .match('**.{scss,sass}', {
         parser: fis.plugin('node-sass', {
-            include_paths: ['modules/common/sass']
+            include_paths: [ 'modules/common/sass' ]
         }),
         rExt: '.css'
     })
@@ -86,19 +88,22 @@ fis.match('**/_*.scss', {
         }
     })
     .match('**.{js,tpl}', {
+
         // domain: 'http://7.url.cn/edu/activity/' + name
     })
     .match('**.{css,scss,sass}', {
+        postprocessor: fis.plugin('autoprefixer')
+
         // domain: 'http://7.url.cn/efidu/activity/' + name
     })
     .match('::image', {
+
         // domain: 'http://7.url.cn/edu/activity/' + name
     })
     .match('::package', {
         prepackager: fis.plugin('csswrapper'),
-        packager: [fis.plugin('smart')]
+        packager: [ fis.plugin('smart') ]
     });
-
 
 /**
  * 开发
@@ -109,7 +114,6 @@ fis.media('dev')
             to: '../dev'
         })
     });
-
 
 /**
  * 发布
@@ -131,9 +135,9 @@ fis.media('dist')
         useHash: true
     })
     .match('::package', {
-        packager: [fis.plugin('smart', {
+        packager: [ fis.plugin('smart', {
             autoPack: true
-        })]
+        }) ]
     })
     .match('*', {
         deploy: [

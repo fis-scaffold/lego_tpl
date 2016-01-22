@@ -1,0 +1,95 @@
+{
+    "globals":{
+        "Meteor": false,
+        "Mongo": false,
+        "Template": false,
+        "$": false,
+        "jQuery": true,
+        "exports": true,
+        "module": true,
+        "define": true,
+        "require": true,
+        "it": true,
+        "before": true,
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "__inline": true,
+        "__uri": true
+    },
+
+    "nomen": false,
+    "onevar": false,
+    "passfail": false,
+    "white": false,
+    "maxerr": 50,
+
+    "browser": true,
+
+    "devel": true,
+
+    "nonstandard": true,
+
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": false,
+    "newcap": true,
+    "noarg": true,
+    "noempty": false,
+    "nonew": true,
+    "plusplus": false,
+    "regexp": false,
+    "undef": true,
+    "unused": false,
+    "strict": false,
+    "trailing": false,
+
+    "quotmark": "true",
+
+    "indent": 4,
+
+    "maxlen": 120,
+
+    "maxparams": 5,
+
+    "maxdepth": 5,
+    "maxstatements": 50,
+
+    "maxcomplexity": 10,
+
+
+    "asi": false,
+    "boss": false,
+    "debug": false,
+    "eqnull": false,
+    "es5": false,
+    "esnext": true,
+    "evil": true,
+    "expr": true,
+    "funcscope": false,
+    "globalstrict": false,
+    "iterator": false,
+
+
+    "lastsemic": false,
+    "laxbreak": false,
+    "laxcomma": false,
+    "loopfunc": false,
+    "multistr": true,
+    "proto": false,
+    "onecase": true,
+    "regexdash": false,
+    "scripturl": true,
+    "smarttabs": false,
+    "shadow": false,
+    "sub": true,
+    "supernew": false,
+    "validthis": false,
+
+    "-W065": false,
+    "-W069": false
+}

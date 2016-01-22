@@ -11,5 +11,9 @@ $('h1:first').after(tpl({
     word: 'Good job!'
 }));
 
+var c = 'a';
+var b = 'c';
 
 module();
+console.log('444444');
+console.log(c);
